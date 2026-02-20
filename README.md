@@ -1,11 +1,11 @@
-# ☁️ Hybrid Data Replication using AWS Storage Gateway
+#  Hybrid Data Replication using AWS Storage Gateway
 
 This project demonstrates how to integrate on-premises storage with AWS S3 using **AWS Storage Gateway (File Gateway)** for seamless **hybrid data replication**.  
 It automatically syncs files created in a local NFS mount to an Amazon S3 bucket.
 
 ---
 
-## 🚀 Project Overview
+##  Project Overview
 
 The **Hybrid Data Replication using AWS Storage Gateway** project demonstrates how to connect on-premises infrastructure with **AWS Cloud storage** to achieve seamless, secure, and automatic data synchronization.
 
@@ -18,7 +18,7 @@ This hybrid architecture allows organizations to:
 - Simplify **backup, restore, and archival** operations
 - Minimize the need for complex manual synchronization or data transfer jobs
 
-### 🔑 Key Features
+###  Key Features
 - **Hybrid Cloud Integration:** Seamlessly connects on-premises workloads to AWS S3.  
 - **Automatic Data Replication:** Any local file changes are synced to the cloud in near real-time.  
 - **File Gateway Protocols:** Supports **NFS** or **SMB** for compatibility with existing systems.  
@@ -28,14 +28,14 @@ This hybrid architecture allows organizations to:
 
 ---
 
-## 🛠️ Step-by-Step Implementation
+##  Step-by-Step Implementation
 
 ### **1️⃣ Create Storage Gateway**
 - Open the **AWS Storage Gateway Console**
 - Choose **File Gateway** as the gateway type
 - Deploy gateway on **Amazon EC2**
 
-📸 *Screenshot:*  
+ 
 ![Storage Gateway](SS/StorageGateway.png)
 
 ---
@@ -46,7 +46,7 @@ This hybrid architecture allows organizations to:
 - Ensure **All Traffic** is temporarily allowed in the default Security Group (for setup)
 - Note down the **public IP** of the instance — this will be used to activate the gateway
 
-📸 *Screenshot:*  
+  
 ![Gateway Appliance](SS/Gateway-Applience.png)
 
 ---
@@ -56,7 +56,7 @@ This hybrid architecture allows organizations to:
 - Enter the public IP of your EC2 appliance
 - Complete the activation steps
 
-📸 *Screenshot:*  
+ 
 ![Activate Gateway](SS/Avtivate-Gateway.png)
 
 ---
@@ -65,7 +65,7 @@ This hybrid architecture allows organizations to:
 - Go to **Amazon S3** and create a new private bucket 
 - Keep the bucket **empty** for now
 
-📸 *Screenshot:*  
+  
 ![Empty Bucket](SS/Empty-bkt.png)
 
 ---
@@ -75,8 +75,7 @@ This hybrid architecture allows organizations to:
 - Select **Amazon S3 bucket** as the target
 - Choose **NFS** as the access protocol
 - Configure other settings and create the file share
-
-📸 *Screenshot:*  
+  
 ![File Share Protocol](SS/fileshare-protocol.png)
 
 ---
@@ -85,7 +84,7 @@ This hybrid architecture allows organizations to:
 - Once created, note the **Mount Command** displayed for your NFS client
 - This command will be used to mount your file share on EC2
 
-📸 *Screenshot:*  
+
 ![File Share Created](SS/created-fileshare.png)
 
 ---
